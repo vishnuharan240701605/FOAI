@@ -1,0 +1,75 @@
+/* Base Grid Cell Styles */
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #334155;
+    background-color: #1e293b; /* Free path color */
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cell:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+/* Cell State Classes - Clean & High Specificity */
+.cell.wall {
+    background-color: #020617; /* Wall (Black) */
+    border-color: #0f172a;
+}
+
+.cell.start {
+    background-color: #10b981; /* Start (Green) */
+    border-color: #059669;
+    color: #ffffff;
+}
+
+.cell.goal {
+    background-color: #f43f5e; /* Goal (Red) */
+    border-color: #e11d48;
+    color: #ffffff;
+}
+
+.cell.visited {
+    background-color: #0284c7; /* Visited (Blue) */
+    border-color: #0369a1;
+    animation: pulseVisited 0.25s ease-out forwards;
+}
+
+.cell.path {
+    background-color: #eab308; /* Path (Yellow) */
+    border-color: #ca8a04;
+    color: #000000;
+    animation: popPath 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Animations */
+@keyframes pulseVisited {
+    0% {
+        transform: scale(0.4);
+        background-color: #38bdf8;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #0284c7;
+    }
+}
+
+@keyframes popPath {
+    0% {
+        transform: scale(0.4);
+        background-color: #fde047;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #eab308;
+    }
+}
