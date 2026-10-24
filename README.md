@@ -35,19 +35,26 @@
 
 ---
 
-## 📁 Code Architecture
+## 📁 Repository Structure
 
 ```
 FOAI/
-├── app.py                  # Flask Backend Server with API endpoints
-├── maze_ai.py              # Self-contained CLI Python project file
-├── templates/
-│   └── index.html          # Modern Glassmorphism Visual Interface
-└── static/
-    ├── css/
-    │   └── styles.css      # Custom cell state styles, glow effects, animations
-    └── js/
-        └── script.js       # Asynchronous visualizer engine & interactive grid
+├── project/
+│   ├── app.py                  # Flask Backend Server with API endpoints
+│   ├── maze_ai.py              # Self-contained CLI Python project file
+│   ├── templates/
+│   │   └── index.html          # Modern Glassmorphism Visual Interface
+│   └── static/
+│       ├── css/
+│       │   └── styles.css      # Custom cell state styles, glow effects, animations
+│       └── js/
+│           └── script.js       # Asynchronous visualizer engine & interactive grid
+├── project reports/
+│   ├── MAZE_AI_IEEE_Paper.pdf          # Research paper on the Maze AI system
+│   ├── MAZE_AI_Project_Report-2.pdf    # Comprehensive project report
+│   └── Project_Presentation_MAZE_AI_.pptx # Presentation slide deck
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -55,6 +62,9 @@ FOAI/
 ## 🚀 How to Launch Locally
 
 ```bash
+# Navigate into the project folder
+cd project
+
 # Install Flask (if not already installed)
 pip install flask
 
